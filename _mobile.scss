@@ -1,0 +1,190 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16;
+        padding-right: 16;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .header {
+        padding-top: 32px;
+        border-bottom: none;
+        &__input {
+            display: none;
+        }
+    }
+    .menu {
+        display: none;
+        &__headertxt__link {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-text;
+        }
+        &-mob {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+    }
+    .logo {
+        margin-left: 16px;
+        &__img {
+            width: 99px;
+        }
+    }
+    .title {
+        color: $color-text;
+        text-align: center;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .headertxt {
+        &__prgf_of {
+            color: $color-text;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px; /* 200% */
+        }
+        &__link {
+            color: $color-text;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 171.429% */
+            text-decoration-line: underline;
+        }
+
+    }
+    .for {
+        grid-template-columns: repeat(4, 1fr);
+        &__hitem {
+            grid-column: 1 / -1;
+            height: 375px;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            &_big {
+                height: 244px;
+            }
+        }
+        &__texthead {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .section {
+        &__price {
+            font-size: 18px;
+            font-style: normal;
+            line-height: normal;
+            display: flex;
+        }
+    }
+    .cat {
+        &__texthead {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+    .spec_lv,
+    .head_hvchair {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .prgf_saleprice {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .cat_button_link {
+        margin-top: 36px;
+        margin-bottom: 32px;
+    }
+    .footer_contact {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .f_frame {
+        margin-left: 53px;
+        margin-right: 53px;
+
+    }
+    .prgf_getupd {
+        margin-top: 47px;
+    }
+    .out_head {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    .cat_button_link {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 228.571% */
+        text-decoration: none;
+    }
+    .cart {
+        &__pic {
+            display: none;
+
+        }
+        .cart__button-down1 {
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            color: #000000;
+            justify-content: center;
+            padding: 10px 22px 10px 20px;
+            background-color: transparent;
+        }
+        .cart__button-down1:hover {
+            color: #ffffff;
+            transition: all 20ms;
+            background-color: #000000;
+        }
+    }
+    .sale {
+        &__img {
+        background-image: url(img/Rectangle_22.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        }
+        &__frame {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+       .prgf_firstprice {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration-line: strikethrough;
+    } 
+}
+
+
