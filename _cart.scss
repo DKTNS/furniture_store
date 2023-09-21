@@ -1,13 +1,65 @@
-/*---------header---------*/
+/*---------глобальные стили---------*/
+/*--------------Global style--------------*/
+$color-text: #fff;
+
 * {
-    font-family: 'Montserrat', sans-serif;
-    
-}
-.section_sale_head {
-    display: flex;
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+/*--------------End Global style--------------*/
+
+/*---------header---------*/
+.top__basket {
+    height: 400px;
+    background-image: url(img/basket/head_rectangle_29.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header {
+    &__input {
+        &-basket {
+            width: 288px;
+            height: 41px;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            align-items: center;
+            outline: none;
+            background-color: transparent;
+            border-radius: 20px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: #fff;
+            padding-left: 32px;
+            padding-right: 32px;
+
+            &::placeholder {
+                color: $color-text;
+            }
+
+            &:focus::-webkit-input-placeholder {
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+        }
+    }
+}
+
+/*---------оформление заказа---------*/
+/* 
 .head_basket_sale_txt {
     font-size: 48px;
     font-style: normal;
@@ -16,16 +68,7 @@
     color: #000000;
     text-align: left;
 }
-.top__basket {
-    height: 400px;
-    background-image: url(img/basket/head_rectangle_29.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: Montserrat, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .basket__head_txt {
     font-family: Montserrat;
     font-weight: 600;
@@ -35,114 +78,27 @@
     font-style: normal;
     margin-top: 126px;
     margin-bottom: 126px;
-}
+} */
 
 .cart {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
     margin-top: 64px;
-    margin-bottom: 64px;
-    justify-items: center;
-    display: flex;
     flex-wrap: wrap;
+
     &__form {
         border-radius: 20px;
         background: #F7F6F6;
         height: 556px;
         grid-column: span 4;
-        margin-left: 33px;
+        /* margin-left: 33px; */
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        width: 379px;
     }
-    &__content {
-        display: grid;
-        grid-column: span 8;
-    }
-    &__name-box {
-        display: flex;
-        padding-bottom: 14px;
-        justify-content: space-between;
-    }
-    &__item {
-        display: flex;
-        border-top: #000;;
-        padding-top: 25px;
-        padding-bottom: 32px;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    &__left {
-        display: flex;
-        gap: 32px;
-    }
-    &__info {
-        width: 276px;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-    &__link-box {
-        display: flex;
-        gap: 30px;
-    }
-    &__button-link {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 150% */
-        text-decoration-line: underline;
-        color: #000;
-    }
-    &__gocatalog {
-        color: #000;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 150% */
-        text-decoration-line: underline;
 
-    }
-    &__button {
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        color: #000;
-        display: flex;
-        line-height: normal;
-        gap: 7px;
-    }
-    &__button-down {
-        display: flex;
-        align-items: center;
-        border-radius: 50px;
-        border: 1px solid #000;
-        box-sizing: border-box;
-        color: #000000;
-        justify-content: center;
-        padding: 10px 22px 10px 20px;
-        background-color: transparent
-
-    }
-    &__quantity-box {
-        border-radius: 6px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: center;
-        font-family: Poppins;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 210%; /* 29.4px */
-        display: flex;
-        width: 47px;
-        height: 27px;
-        flex-direction: column;
-        justify-content: center;
-        background: #F7F6F6;
-        border: 0;
-    }
     &__flname {
         color: #000;
         font-size: 14px;
@@ -154,14 +110,184 @@
         border-left: 0;
         border-right: 0;
         border-bottom: 0.5px solid #CACDD8;
-        border-radius: 20px;
         margin-left: 27px;
-        margin-bottom: 41px;
+        margin-right: 64px;
         display: flex;
-        padding-left: 27px;
-        padding-right: 64px;
+        background: transparent;
 
+        &:focus::-webkit-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
+    }
+
+    &__content {
+        display: grid;
+        grid-column: span 8;
+    }
+
+    &__name-box {
+        display: flex;
+        padding-bottom: 14px;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        border-top: #000;
+        ;
+        padding-top: 25px;
+        padding-bottom: 32px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__left {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__info {
+        width: 276px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__pic {
+        width: 173px;
+        height: 173px;
+    }
+
+    &__link-box {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__gocatalog {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: none;
+    }
+
+    &__button-link {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        text-decoration-line: underline;
+        color: #000;
+    }
+
+    &__button {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        color: #000;
+        display: flex;
+        line-height: normal;
+        gap: 7px;
+
+        &:hover {
+            transition: all 200ms ease;
+            color: #000000;
+        }
+
+        &-link {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 150% */
+            text-decoration-line: underline;
+            color: #000;
+        }
+
+        &-down {
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            color: #000000;
+            justify-content: center;
+            padding: 10px 22px 10px 20px;
+            background-color: transparent
+        }
+
+        &-clear {
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            color: #000000;
+            justify-content: center;
+            display: inline-flex;
+            padding: 10px 34px 10px 33px;
+            background-color: transparent;
+
+            &:hover {
+                color: #ffffff;
+                transition: all 20ms;
+                background-color: #000000;
+            }
+        }
+
+        &-continue {
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            color: #000000;
+            justify-content: center;
+            padding: 10px 22px 10px 20px;
+            background-color: transparent;
+
+            &:hover {
+                color: #ffffff;
+                transition: all 20ms;
+                background-color: #000000;
+            }
+        }
+    }
+
+    &__button-down {
+        display: flex;
+        align-items: center;
+        border-radius: 50px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        color: #000000;
+        justify-content: center;
+        padding: 10px 22px 10px 20px;
+        background-color: transparent
+    }
+
+    &__quantity-box {
+        border-radius: 6px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 210%;
+        display: flex;
+        width: 47px;
+        height: 27px;
+        flex-direction: column;
+        justify-content: center;
+        background: #F7F6F6;
+        border: 0;
+    }
+
     &__formzakaz {
         display: flex;
         width: 290px;
@@ -181,17 +307,50 @@
         margin-left: 44px;
         margin-right: 44px;
         margin-bottom: 108px;
-        background-color: transparent
+        background-color: transparent &;
+
+        &:hover {
+            color: #ffffff;
+            transition: all 20ms;
+            background-color: #000000;
+        }
     }
-    &__sale {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 64px;
+
+    &__hoformleniezakaza {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin-bottom: 8px;
     }
-    &__bst {
-        margin-bottom: 32px;
-    }
+
     &__ofzakaz-center {
         text-align: center;
     }
+
 }
+
+.basket_frame {
+    display: flex;
+    flex-wrap: wrap;
+    width: 378px;
+    row-gap: 8px;
+
+}
+
+
+
+/*  
+        &__sale {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 64px;
+        }
+
+        &__bst {
+        margin-bottom: 32px;
+        }
+
+        &__ofzakaz-center {
+        text-align: center;
+        } */
