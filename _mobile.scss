@@ -24,6 +24,7 @@
     .header {
         padding-top: 32px;
         border-bottom: none;
+        flex-wrap: wrap;
 
         &__input {
             display: none;
@@ -32,14 +33,6 @@
         &__menu {
             display: none;
 
-            &__header__text-link {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 20px;
-                color: $color-text;
-            }
-
             &-mob {
                 display: flex;
                 align-items: center;
@@ -47,6 +40,13 @@
                 padding-left: 16px;
                 padding-right: 16px;
 
+                .header__text-link {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $color-text;
+                }
             }
         }
 
@@ -198,6 +198,8 @@
         }
     }
 }
+
+
 
 /*     
 .section {

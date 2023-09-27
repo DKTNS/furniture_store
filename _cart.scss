@@ -1,4 +1,3 @@
-/*---------глобальные стили---------*/
 /*--------------Global style--------------*/
 $color-text: #fff;
 
@@ -14,6 +13,7 @@ body {
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
+
 }
 
 /*--------------End Global style--------------*/
@@ -52,12 +52,28 @@ body {
 
             &:focus::-webkit-input-placeholder {
                 opacity: 0;
+                transform: scale(1.2);
                 transition: opacity 0.3s ease;
             }
         }
     }
+
+/*     &__menu {
+        display: none;
+
+        &-mob {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    } */
+
 }
 
+
+@import 'mobile';
 /*---------оформление заказа---------*/
 /* 
 .head_basket_sale_txt {
@@ -81,18 +97,15 @@ body {
 } */
 
 .cart {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     gap: 32px;
     margin-top: 64px;
-    flex-wrap: wrap;
-
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     &__form {
         border-radius: 20px;
         background: #F7F6F6;
         height: 556px;
         grid-column: span 4;
-        /* margin-left: 33px; */
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -124,6 +137,7 @@ body {
     &__content {
         display: grid;
         grid-column: span 8;
+
     }
 
     &__name-box {
@@ -135,7 +149,6 @@ body {
     &__item {
         display: flex;
         border-top: #000;
-        ;
         padding-top: 25px;
         padding-bottom: 32px;
         justify-content: space-between;
@@ -191,10 +204,16 @@ body {
         display: flex;
         line-height: normal;
         gap: 7px;
+        margin-bottom: 64px;
+        transition: all 0.3s;
 
         &:hover {
+            animation: myAnim 0.3s ease-in 0s 1 alternate none;
             transition: all 200ms ease;
             color: #000000;
+            -webkit-animation: scale-in-center 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s 2 both;
+            animation: scale-in-center 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s 2 both;
+
         }
 
         &-link {
@@ -217,6 +236,7 @@ body {
             justify-content: center;
             padding: 10px 22px 10px 20px;
             background-color: transparent
+
         }
 
         &-clear {
@@ -233,8 +253,9 @@ body {
 
             &:hover {
                 color: #ffffff;
-                transition: all 20ms;
                 background-color: #000000;
+                transition: all 1s;
+                transform: scale(1.1);
             }
         }
 
@@ -251,13 +272,14 @@ body {
 
             &:hover {
                 color: #ffffff;
-                transition: all 20ms;
+                transition: all 1s;
+                transform: scale(1.1);
                 background-color: #000000;
             }
         }
     }
 
-    &__button-down {
+/*     &__button-down {
         display: flex;
         align-items: center;
         border-radius: 50px;
@@ -267,7 +289,7 @@ body {
         justify-content: center;
         padding: 10px 22px 10px 20px;
         background-color: transparent
-    }
+    } */
 
     &__quantity-box {
         border-radius: 6px;
@@ -307,12 +329,15 @@ body {
         margin-left: 44px;
         margin-right: 44px;
         margin-bottom: 108px;
-        background-color: transparent &;
-
+        background-color: transparent;
+        animation: myAnim 0.5s ease-in-out 0s 1 normal backwards;
         &:hover {
             color: #ffffff;
-            transition: all 20ms;
+            transition: all 0.3s;
+            transform: scale(1.1);
             background-color: #000000;
+
+
         }
     }
 
@@ -322,12 +347,57 @@ body {
         line-height: 29px;
         color: #000000;
         margin-bottom: 8px;
+    
     }
 
     &__ofzakaz-center {
         text-align: center;
     }
 
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
 }
 
 .basket_frame {
