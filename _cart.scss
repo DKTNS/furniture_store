@@ -354,6 +354,14 @@ body {
         text-align: center;
     }
 
+
+}
+.basket_frame {
+    display: flex;
+    flex-wrap: wrap;
+    width: 378px;
+    row-gap: 8px;
+
 }
 
 @keyframes myAnim {
@@ -400,15 +408,8 @@ body {
 	}
 }
 
-.basket_frame {
-    display: flex;
-    flex-wrap: wrap;
-    width: 378px;
-    row-gap: 8px;
-
-}
-
-
+@import 'tablet';
+@import 'mobile';
 
 /*  
         &__sale {
